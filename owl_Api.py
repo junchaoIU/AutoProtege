@@ -42,7 +42,7 @@ class Parse_Owl:
         return dic, ind_start, ind_end
 
     # 重新填装dic
-    def ind_update(self, path, new_dic, start, end):
+    def dic_update(self, path, new_dic, start, end):
         f_read = codecs.open(path, 'r', encoding='utf-8')
         byt = f_read.readlines()
         f_read.close()
@@ -55,3 +55,29 @@ class Parse_Owl:
         for i in new_byt:
             f_write.write(i)
         f_write.close()
+
+    # 获取目标类下的所有实体
+    def get_class_inds(self, dic, target):
+        new_dic = {}
+        for i in dic:
+            for connent in dic[i]:
+                match = re.match(r'        <rdf:type rdf:resource="(.*)#(.*)"/>', connent)
+                if match:
+                    if match.group(2) in target:
+                        new_dic[i] = dic[i]
+        return new_dic
+
+    # 删除目标类下的所有实体
+    # 修改完dic后再用这个就可以更新owl（注意，使用这个函数前最好备份一份owl，以防出错）
+    def del_class_inds(self, dic, target):
+        l = list(dic)
+        for i in dic:
+            for connent in dic[i]:
+                match = re.match(r'        <rdf:type rdf:resource="(.*)#(.*)"/>', connent)
+                if match:
+                    if match.group(2) in target:
+                        l.remove(i)
+        new_dic = {}
+        for i in l:
+            new_dic[i] = dic[i]
+        return new_dic
