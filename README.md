@@ -6,7 +6,7 @@
 
 ## 🌈简介
 🎉  protegeAuto_tool
-- protegeAuto_tool是一个面向斯坦福大学研发的开源本体构建框架protege而开发的python操作包
+- protegeAuto_tool是一个面向斯坦福大学研发的开源本体构建工具protege而开发的python操作包
 - 基于protegeAuto_tool可以打破传统手工构建本体库的局限，实现本体数据的批量增改和查询等操作，更为灵活
 - 版权归北京师范大学珠海分校管理学院广州革命历史知识图谱团队所有
 
