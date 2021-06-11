@@ -1,5 +1,5 @@
-[![author](https://img.shields.io/badge/Author-WuJunchao-purple)](https://github.com/junchaoIU/protegeAuto_tool/blob/main/LICENSE)
-[![license](https://img.shields.io/crates/l/rustc-serialize)](https://github.com/junchaoIU/protegeAuto_tool/blob/main/LICENSE)
+[![author](https://img.shields.io/badge/Author-WuJunchao-purple)](https://github.com/junchaoIU)
+[![license](https://img.shields.io/badge/license-MPL2.0-blue)](https://github.com/junchaoIU/protegeAuto_tool/blob/main/LICENSE)
 [![protege](https://img.shields.io/badge/protege-5.5.0-yellowgreen)](https://github.com/protegeproject/protege)
 [![python](https://img.shields.io/badge/Python-3.7.6-orange)](https://github.com/TheAlgorithms/Python)
 
