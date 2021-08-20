@@ -52,6 +52,11 @@ print(dic)
 
 ## 其他：
 > 如果你对该项目感兴趣的话，欢迎了解项目的一些详细内容：
+
+> 广州革命历史数字图书馆
+> 系统前端：https://github.com/junchaoIU/Canton-KG-React
+> 系统后端：https://github.com/Chen-X666/canton
+
 > 该项目阶段性成果论文1：
 > - J. Wu, Y. Jiang, X. Chen, et al. "The Canton Canon" Digital Library Based on Knowledge
 Graph - Taking the Revolutionary Archives of Canton in the Republic of China as an Example. [C]// 2021 10th International Conference on Educational and Information Technology (ICEIT),2021: 171-179.
