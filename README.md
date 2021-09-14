@@ -8,7 +8,11 @@
 🎉  protegeAuto_tool
 - protegeAuto_tool是一个面向斯坦福大学研发的开源本体构建工具protege而开发的python操作包
 - 基于protegeAuto_tool可以打破传统手工构建本体库的局限，实现本体数据的批量增改和查询等操作，更为灵活
+- 不基于SPARSQL 进行检索，降低了学习成本
+- 尽量涵盖基础接口，满足交叉领域学者的本体构建需求
+- 在功能完善的基础上进行轻量化，便于用户根据项目需求二次开发
 - 版权归北京师范大学珠海分校管理学院广州革命历史知识图谱团队所有
+- 供与学术研究使用 有什么新功能需求可提issue，会在后续陆续更新
 
 > PS:目前V1.0.0 版本还未更新完毕，代码的整理及完善需要时间，预计2021年底发布第一个版本，欢迎各位protege的使用者可以期待&关注一下
 
@@ -56,14 +60,3 @@ print(dic)
 > 广州革命历史数字图书馆
 > 系统前端：https://github.com/junchaoIU/Canton-KG-React
 > 系统后端：https://github.com/Chen-X666/canton
-
-> 该项目阶段性成果论文1：
-> - J. Wu, Y. Jiang, X. Chen, et al. "The Canton Canon" Digital Library Based on Knowledge
-Graph - Taking the Revolutionary Archives of Canton in the Republic of China as an Example. [C]// 2021 10th International Conference on Educational and Information Technology (ICEIT),2021: 171-179.
-> - DOI: 10.1109/ICEIT51700.2021.9375538
-
-> 该项目阶段性成果论文2：
-> - 基于知识图谱的民国革命历史时空模型构建与应用
-> - （在投）
-
-> 项目的其他核心代码会逐渐开源（包括本体构建等）
