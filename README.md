@@ -37,7 +37,7 @@ AutoProtégé的设计主要采用面向规则对象的编程思想，将本体�
 在读取OWL文件时,基于正则表达式匹配的方法将各个结构部分进行解析，拆解为不同的集合模块，将集合中的个体封装为各类规则对象，生成字典索引，并存储进对应的规则对象字典变量中，实现轻量的分类和索引，而头部（header）和尾部（footer）则简单地以字符串的形式定义为全局变量。在用户对本体知识库操作完成后，调用相应的重组函数,将缓存的各个集合模块按顺序进行反向解析重组，从而生成一个最新操作后的OWL文件。除此之外，AutoProtégé还提供了本体模型初始化和数据批量转化等一定场景下的高效通用接口，主要基于简单的模板定义实现，在此不予赘述。
 
 
-## ✨ Process Description（进程说明）
+## ⚙ Process Description（进程说明）
 At present, the V1.0 version has not been updated yet. Welcome all protege users to look forward to it and pay attention.
 In addition, the mangoDB mapping version of protege is being designed. MangoDB based on JSON management can better reduce the learning cost of experts and scholars for RDFS/OWL knowledge framework related tools.
 
