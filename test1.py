@@ -6,9 +6,9 @@
 # Date:   2021/6/10
 # -------------------------------------------------------------------------------
 
-from owl_Api import *
+from owlApiv1 import *
 
-owl_path = r"cantonowl\Event.owl"  # 目标owl地址
+owl_path = r"owlDataSet\Event.owl"  # 目标owl地址
 owl_model = Parse_Owl()
 
 """
