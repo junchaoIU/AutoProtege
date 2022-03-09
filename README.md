@@ -24,10 +24,10 @@ We summarize several problems that prot é g é may face in the process of use:
 - It is difficult to realize large-scale data query, modification and input
 - It is necessary to learn other prior knowledge, such as ontology retrieval language, and the learning cost is too high
 
-In the environment of big data, in order to adapt to its application, based on the syntax framework of RDFS / Owl, facing the description rules of prot é g é for knowledge, we use python programming language to design an ontology knowledge operation library autoprot é g é, which provides a solution to support the automatic mapping and management of massive knowledge.
+In the environment of big data, in order to adapt to its application, based on the syntax framework of RDFS / Owl, facing the description rules of prot é g é for knowledge, we use python programming language to design an ontology knowledge operation library autoprotégé, which provides a solution to support the automatic mapping and management of massive knowledge.
 
 ## ✨ Design Ideas（设计思想）
-AutoProtégé的设计主要采用面向规则对象的编程思想，将本体规则中常涉及到的四种基本概念规则：类（Class），实例（Individual），实体关系（Object Property），实体属性（Data Property）封装为操作对象。对规则对象操作过程可能涉及到的通用信息进行定义，为规则对象赋予同样的3种属性字段，见表9：
+AutoProtégé的设计主要采用面向规则对象的编程思想，将本体规则中常涉及到的四种基本概念规则：类（Class），实例（Individual），实体关系（Object Property），实体属性（Data Property）封装为操作对象。对规则对象操作过程可能涉及到的通用信息进行定义，为规则对象赋予同样的3种属性字段。
 
 基于以上构建的基础规则对象及其属性和函数方法，在顶层设计针对OWL文件的拆解和重组方法。AutoProtégé将一个OWL文件按结构顺序拆解为头部（header），实体关系集合（objectPropertyList），实体属性集合（dataPropertyList），类集合（classesList），实例集合（individualList）和尾部（footer）共6个集合模块。
 
