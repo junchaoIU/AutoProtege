@@ -38,10 +38,12 @@ AutoProtégé的设计主要采用面向规则对象的编程思想，将本体�
 
 
 ## ⚙ Process Description（进程说明）
-At present, the V1.0 version has not been updated yet. Welcome all protege users to look forward to it and pay attention.
+Since the V1.0 project version has major defects found in the development process, it has been cancelled.
+At present, the redesign and development of the V2.0 version has been completed, and most of the work has been completed, but it has not been updated yet. Welcome all protege users to look forward to it and pay attention.
 In addition, the mangoDB mapping version of protege is being designed. MangoDB based on JSON management can better reduce the learning cost of experts and scholars for RDFS/OWL knowledge framework related tools.
 
-目前V1.0 版本还未更新完毕，欢迎各位protege的使用者可以期待&关注一下。
+由于V1.0项目版本在开发过程中发现有重大缺陷，已作废。
+目前进行V2.0 版本的重新设计和开发，已完成大部分工作，还未更新完毕，欢迎各位protege的使用者可以期待&关注一下。
 另外正在设计protege的 mangoDB映射版本，基于JSON管理的mangoDB可以更好的减少专家学者对于RDFS/OWL知识框架相关工具的学习成本。
 
 
@@ -53,10 +55,10 @@ In addition, the mangoDB mapping version of protege is being designed. MangoDB b
 ## 📦 Quick Start（快速使用）
 ```shell
 # clone
-git clone https://github.com/junchaoIU/AutoProtégé.git
+git clone https://github.com/junchaoIU/AutoProtege.git
 
 # Enter the project directory
-cd AutoProtégé
+cd AutoProtege
 ```
 
 ```python
