@@ -5,7 +5,7 @@ from owlApiv2 import *
 
 # define domainName and owlPath
 domainName = "testKG"
-owlPath = "E:\gitHome\github\protegeAuto_tool\owlDataSet\Personage.owl"
+owlPath = ".\owlDataSet\Personage.owl"
 
 # dismantling owl
 header, opList, dpList, classesList, indsList, footer = readOwl(owlPath, domainName)
@@ -33,4 +33,4 @@ oneEntity.addObjectProperty("哥哥", "鲁迅")
 indsList.append(oneEntity)
 
 # assemble owl
-generateOwl(header, opList, dpList, classesList, indsList, footer, domainName)
+# generateOwl(header, opList, dpList, classesList, indsList, footer, domainName)
