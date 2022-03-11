@@ -19,12 +19,12 @@ The ontology editing and knowledge acquisition software prot é g é developed b
 
 在大数据的环境下，为适应其应用，我们立足于RDFS/OWL 的语法框架，面向Protégé对知识的描述规则，使用Python编程语言设计了一个本体知识操作库AutoProtégé，提供了一个支持海量知识自动化映射和管理的解决方案。
 
-We summarize several problems that prot é g é may face in the process of use:
+We summarize several problems that Protégé may face in the process of use:
 - Local operation makes it difficult to carry out multi person synchronous editing and version control
 - It is difficult to realize large-scale data query, modification and input
 - It is necessary to learn other prior knowledge, such as ontology retrieval language, and the learning cost is too high
 
-In the environment of big data, in order to adapt to its application, based on the syntax framework of RDFS / Owl, facing the description rules of prot é g é for knowledge, we use python programming language to design an ontology knowledge operation library autoprot é g é, which provides a solution to support the automatic mapping and management of massive knowledge.
+In the environment of big data, in order to adapt to its application, based on the syntax framework of RDFS / Owl, facing the description rules of prot é g é for knowledge, we use python programming language to design an ontology knowledge operation library AutoProtégé, which provides a solution to support the automatic mapping and management of massive knowledge.
 
 ## ✨ Design Ideas（设计思想）
 AutoProtégé的设计主要采用面向规则对象的编程思想，将本体规则中常涉及到的四种基本概念规则：类（Class），实例（Individual），实体关系（Object Property），实体属性（Data Property）封装为操作对象。对规则对象操作过程可能涉及到的通用信息进行定义，为规则对象赋予同样的3种属性字段，见表9：
@@ -40,7 +40,7 @@ AutoProtégé的设计主要采用面向规则对象的编程思想，将本体�
 ## ⚙ Process Description（进程说明）
 Since the V1.0 project version has major defects found in the development process, it has been cancelled.
 At present, the redesign and development of the V2.0 version has been completed, and most of the work has been completed, but it has not been updated yet. Welcome all protege users to look forward to it and pay attention.
-In addition, the mangoDB mapping version of protege is being designed. MangoDB based on JSON management can better reduce the learning cost of experts and scholars for RDFS/OWL knowledge framework related tools.
+In addition, the mangoDB mapping version of Protégé is being designed. MangoDB based on JSON management can better reduce the learning cost of experts and scholars for RDFS/OWL knowledge framework related tools.
 
 由于V1.0项目版本在开发过程中发现有重大缺陷，已作废。
 目前进行V2.0 版本的重新设计和开发，已完成大部分工作，还未更新完毕，欢迎各位protege的使用者可以期待&关注一下。
