@@ -20,8 +20,42 @@ class OP:
         self.owlLines = lines
         print(lines)
 
+    def updateInverseOf(self, inverseOfOPName):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + inverseOfOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteInverseOf(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
+
     def addEquivalentop(self, equivalentOPName):
         lines = self.owlLines
         lines.insert(1, '<owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + equivalentOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def updateEquivalentop(self, equivalentOPName):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + equivalentOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteEquivalentop(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
         self.owlLines = lines
         print(lines)
