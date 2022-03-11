@@ -19,3 +19,20 @@ class OneClass:
         lines.insert(1, '<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + superClassName + '"/>')
         self.owlLines = lines
         print(lines)
+
+    def updateSuperClass(self, superClassName):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + superClassName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteSuperClass(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
