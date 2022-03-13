@@ -1,5 +1,5 @@
 
-from owlApiv2 import *
+from ontologyApi.owlApiv2 import *
 
 # the first example
 

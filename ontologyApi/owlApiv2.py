@@ -7,10 +7,10 @@
 # -------------------------------------------------------------------------------
 import codecs
 from datetime import datetime
-from oneClass import *
-from objectProperty import *
-from dataProperty import *
-from individual import *
+from ontologyModel.oneClass import *
+from ontologyModel.objectProperty import *
+from ontologyModel.dataProperty import *
+from ontologyModel.individual import *
 
 
 def initialOwl(domainName):
