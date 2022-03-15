@@ -14,25 +14,25 @@ class OP:
         self.domainName = domainName
         self.owlLines = owlLines
 
-    def addInverseOf(self, inverseOfOPName):
+    def addComment(self, comment):
         lines = self.owlLines
-        lines.insert(1, '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + inverseOfOPName + '"/>')
+        lines.insert(1, '<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">' + comment + '</rdfs:comment>')
         self.owlLines = lines
         print(lines)
 
-    def updateInverseOf(self, inverseOfOPName):
+    def updateComment(self, comment):
         lines = self.owlLines
         for line in lines:
-            if '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' in line:
+            if '<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">' in line:
                 lines.remove(line)
-        lines.insert(1, '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + inverseOfOPName + '"/>')
+        lines.insert(1, '<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">' + comment + '</rdfs:comment>')
         self.owlLines = lines
         print(lines)
 
-    def deleteInverseOf(self):
+    def deleteComment(self):
         lines = self.owlLines
         for line in lines:
-            if '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' in line:
+            if '<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">' in line:
                 lines.remove(line)
         self.owlLines = lines
         print(lines)
@@ -56,6 +56,121 @@ class OP:
         lines = self.owlLines
         for line in lines:
             if '<owl:equivalentProperty rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
+
+    def addInverseOf(self, inverseOfOPName):
+        lines = self.owlLines
+        lines.insert(1, '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + inverseOfOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def updateInverseOf(self, inverseOfOPName):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + inverseOfOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteInverseOf(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:inverseOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
+
+    def addSubPropertyOf(self, subPropertyOfOPName):
+        lines = self.owlLines
+        lines.insert(1, '<rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + subPropertyOfOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def updateSubPropertyOf(self, subPropertyOfOPName):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + subPropertyOfOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteSubPropertyOf(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
+
+    def addDomain(self, domainName):
+        lines = self.owlLines
+        lines.insert(1, '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + domainName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def updateDomain(self, domainName):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + domainName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteDomain(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
+
+    def addRange(self, rangeName):
+        lines = self.owlLines
+        lines.insert(1, '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + rangeName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def updateRange(self, rangeName):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + rangeName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteRange(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<rdfs:domain rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        self.owlLines = lines
+        print(lines)
+
+    def addDisjointOP(self, disjointOPName):
+        lines = self.owlLines
+        lines.insert(1, '<owl:propertyDisjointWith rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + disjointOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def updateDisjointOP(self, disjointOPName):
+        lines = self.owlLines
+        for line in lines:
+            if '<<owl:propertyDisjointWith rdf:resource="http://www.owl-ontologies.com/' in line:
+                lines.remove(line)
+        lines.insert(1, '<owl:propertyDisjointWith rdf:resource="http://www.owl-ontologies.com/' + self.domainName + '#' + disjointOPName + '"/>')
+        self.owlLines = lines
+        print(lines)
+
+    def deleteDisjointOP(self):
+        lines = self.owlLines
+        for line in lines:
+            if '<owl:propertyDisjointWith rdf:resource="http://www.owl-ontologies.com/' in line:
                 lines.remove(line)
         self.owlLines = lines
         print(lines)
