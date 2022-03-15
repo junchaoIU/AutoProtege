@@ -14,12 +14,12 @@ class GA:
         self.domainName = domainName
         self.owlLines = owlLines
 
-    def addDiferentInds(self, indName_1, indName_2):
+    def addDiferentInds(self, indsList):
         lines = self.owlLines
         lines.insert(1, '<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>')
         lines.insert(1, '<owl:distinctMembers rdf:parseType="Collection">')
-        lines.insert(1, '<rdf:Description rdf:about="http://www.owl-ontologies.com/' + self.domainName + '#' + indName_1 + '">')
-        lines.insert(1, '<rdf:Description rdf:about="http://www.owl-ontologies.com/' + self.domainName + '#' + indName_2 + '">')
+        for indName in indsList:
+            lines.insert(1, '<rdf:Description rdf:about="http://www.owl-ontologies.com/' + self.domainName + '#' + indName + '">')
         lines.insert(1, '</owl:distinctMembers>')
         self.owlLines = lines
         print(lines)
