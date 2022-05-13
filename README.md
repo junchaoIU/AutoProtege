@@ -1,9 +1,25 @@
-# AutoProtégé: Ontology knowledge Python operation package developed for protege
 
-[![license](https://img.shields.io/badge/license-MPL2.0-blue)](https://github.com/junchaoIU/protegeAuto_tool/blob/main/LICENSE)
-[![protege](https://img.shields.io/badge/protege-5.5.0-yellowgreen)](https://github.com/protegeproject/protege)
-[![python](https://img.shields.io/badge/Python-3.7.6-orange)](https://github.com/TheAlgorithms/Python)
-
+<p align="center">
+    <a alt="jionlp logo">
+        <img src="image/AutoProtege_logo.png" style="width:300px;height:100px">
+    </a>
+</p>
+<p align="center">
+    <a alt="License">
+        <img src="https://img.shields.io/github/license/junchaoIU/AutoProtege?color=crimson" /></a>
+    <a alt="Version">
+        <img src="https://img.shields.io/badge/version-0.0.1-green" /></a>
+    <a href="https://github.com/junchaoIU/AutoProtege/pulse" alt="Activity">
+        <img src="https://img.shields.io/github/commit-activity/m/junchaoIU/AutoProtege?color=blue" /></a>
+    <a alt="Version_Protege">
+        <img src="https://img.shields.io/badge/protege-5.5.0-yellowgreen" /></a>
+    <a alt="Version_Python">
+        <img src="https://img.shields.io/badge/python-3.7.6-orange" /></a>
+</p>
+<p align="center">
+<big>A Python Operation Tool Developed for Stanford University's Open Source Ontology Construction Tool Protege</big><br/>
+<big>面向斯坦福大学开源本体构建工具protege而开发的python操作工具</big>
+</p>
 
 ## 🌈 Introduction（简介）
 **<big>AutoProtégé： 面向斯坦福大学开源本体构建工具protege而开发的python操作库，支持海量知识自动化映射和管理的自定义解决方案</big>**
@@ -31,8 +47,10 @@ AutoProtégé的设计主要采用面向规则对象的编程思想，将本体�
 
 基于以上构建的基础规则对象及其属性和函数方法，在顶层设计针对OWL文件的拆解和重组方法。AutoProtégé将一个OWL文件按结构顺序拆解为头部（header），实体关系集合（objectPropertyList），实体属性集合（dataPropertyList），类集合（classesList），实例集合（individualList）和尾部（footer）共6个集合模块。
 
+
 ![](https://www.wujunchao.top/wp-content/uploads/2022/03/AutoProtege.jpg)
 <center>AutoProtégé本体文件处理流程图</center>
+
 
 在读取OWL文件时,基于正则表达式匹配的方法将各个结构部分进行解析，拆解为不同的集合模块，将集合中的个体封装为各类规则对象，生成字典索引，并存储进对应的规则对象字典变量中，实现轻量的分类和索引，而头部（header）和尾部（footer）则简单地以字符串的形式定义为全局变量。在用户对本体知识库操作完成后，调用相应的重组函数,将缓存的各个集合模块按顺序进行反向解析重组，从而生成一个最新操作后的OWL文件。除此之外，AutoProtégé还提供了本体模型初始化和数据批量转化等一定场景下的高效通用接口，主要基于简单的模板定义实现，在此不予赘述。
 
