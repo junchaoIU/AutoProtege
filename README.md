@@ -80,42 +80,54 @@ cd AutoProtege
 ```
 
 ```python
-from autoprotege.ontApi.owlApiv2 import *
+from autoprotege import ontTool, ontModel
 
 # the first example
-
 # define domainName and owlPath
-domainName = "testKG"
-owlPath = ".\owlDataSet\Personage.owl"
+DOMAIN_NAME = 'TestKG'
+OWL_PATH = 'E:\gitHome\github\protegeAuto_tool\owlDataSet\Personage.owl'
 
-# dismantling owl
-header, opList, dpList, classesList, indsList, footer = readOwl(owlPath, domainName)
+# initial a new owl
+owl = ontTool.initial_owl(DOMAIN_NAME)
+print(owl)
+
+# read a old owl
+owl = ontTool.read_owl('E:\gitHome\github\protegeAuto_tool\owlDataSet\Personage.owl')
+print(owl)
+
+# split the owl
+owl_dic = ontTool.split_owl(owl,DOMAIN_NAME)
+print(owl_dic)
 
 # example of classse
 # add class
-oneClass = OneClass(domainName, "中国民主促进会", None)
+oneClass = ontModel.OneClass(DOMAIN_NAME, "中国民主促进会", None)
 oneClass.addSuperClass("人物")
-classesList.append(oneClass)
+owl_dic['classesList'].append(oneClass)
 
 # add dataProperty
-oneDP = DP(domainName, "特别身份", None)
-dpList.append(oneDP)
+oneDP = ontModel.DP(DOMAIN_NAME, "特别身份", None)
+owl_dic['dpList'].append(oneDP)
 
 # add object Property
-oneOP = DP(domainName, "哥哥", None)
-dpList.append(oneDP)
+oneOP = ontModel.DP(DOMAIN_NAME, "哥哥", None)
+owl_dic['dpList'].append(oneDP)
 
 # add entity
-oneEntity = Individual(domainName, "周建人", None)
+oneEntity = ontModel.Individual(DOMAIN_NAME, "周建人", None)
 oneEntity.addComment(
     "周建人（1888年11月12日-1984年7月29日），生于浙江绍兴都昌坊口，初名松寿，乳名阿松，后改名建人，字乔峰，浙江绍兴人。笔名克士、高山、李正、孙鲠等，鲁迅三弟。（即《风筝》中的小弟。）")
 oneEntity.addType("中国民主促进会")
 oneEntity.addDataProperty("特别身份", "鲁迅的三弟")
 oneEntity.addObjectProperty("哥哥", "鲁迅")
-indsList.append(oneEntity)
+owl_dic['indsList'].append(oneEntity)
 
-# assemble owl
-generateOwl(header, opList, dpList, classesList, indsList, footer, domainName)
+# merge owl
+owl = ontTool.merge_owl(owl_dic)
+print(owl)
+
+# write owl
+ontTool.write_owl(owl,OWL_PATH)
 ```
 
 ## 🌸 About Author（关于作者）
