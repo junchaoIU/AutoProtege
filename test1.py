@@ -6,7 +6,7 @@
 # Date:   2021/6/10
 # -------------------------------------------------------------------------------
 
-from ontologyApi.owlApiv1 import *
+from autoprotege.ontApi.owlApiv1 import *
 
 owl_path = r"owlDataSet\Event.owl"  # 目标owl地址
 owl_model = Parse_Owl()

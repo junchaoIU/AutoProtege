@@ -80,7 +80,7 @@ cd AutoProtege
 ```
 
 ```python
-from ontologyApi.owlApiv2 import *
+from autoprotege.ontApi.owlApiv2 import *
 
 # the first example
 
