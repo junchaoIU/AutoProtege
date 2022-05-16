@@ -10,7 +10,7 @@
 
 import codecs
 
-class ReadOwl(object):
+class WriteOwl(object):
 
     def __init__(self):
         self.owl = None
@@ -23,4 +23,4 @@ class ReadOwl(object):
         f = codecs.open(owlPath, 'w', encoding='utf-8')
         f.write(owl)
         f.close()
-        print("written in {}".format(owl))
+        print("successfully updated in {}".format(owlPath))

@@ -12,8 +12,10 @@ from.initial_owl import InitialOwl
 from .split_owl import SpiltOwl
 from .read_owl import ReadOwl
 from .merge_owl import MergeOwl
+from .write_owl import WriteOwl
 
 initial_owl = InitialOwl()
 split_owl = SpiltOwl()
 read_owl = ReadOwl()
 merge_owl = MergeOwl()
+write_owl = WriteOwl()

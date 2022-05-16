@@ -27,6 +27,7 @@ class MergeOwl(object):
         """
 
         for line in class_dic['header']:
+            print(class_dic['header'])
             self.owl += line
             self.owl += '\n'
 
