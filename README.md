@@ -143,10 +143,3 @@ ontTool.write_owl(owl,OWL_PATH)
 - 本项目正在进行相关论文投稿，可做开源工具使用，使用时如果方便的话请致邮告知您的具体用途，谢谢~
 - 本项目不可做商业用途，或者直接套用作为课题科研成果
 
-## 🍉 其他相关项目
-1. 📚 CRHE-KG 广州革命历史知识图谱数字图书馆前端v1.0
-- https://github.com/junchaoIU/CRHE-KG_DEV1.0_React
-2. 📚 CMRH-KG 中国革命历史知识图谱数字图书馆前端v2.0
-- https://github.com/junchaoIU/CMRH-KG_DEV2.0_React
-3. 📚 CMRH-KG 中国近代革命历史知识图谱数字图书馆后端V1.0
-- https://github.com/Chen-X666/CMRH-KG_DEV1.0_SpringBoot
