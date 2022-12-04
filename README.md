@@ -73,11 +73,12 @@ In addition, the mangoDB mapping version of Protégé is being designed. MangoDB
 ## 📦 Quick Start（快速使用）
 ```shell
 # install
-pip install autoprotege==2.0.0
+git clone https://github.com/junchaoIU/AutoProtege.git
+cd AutoProtege
 
 # version
-import qcnlp as qc
-print(qc.__version__)
+import autoprotege
+print(autoprotege.__version__)
 # 2.0.0
 ```
 
