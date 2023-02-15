@@ -140,7 +140,3 @@ ontTool.write_owl(owl,OWL_PATH)
 
 如遇到问题，请致邮（Email）：wujunchaoIU@outlook.com
 
-## ❗ Statement（声明）
-- 本项目正在进行相关论文投稿，可做开源工具使用，使用时如果方便的话请致邮告知您的具体用途，谢谢~
-- 本项目不可做商业用途，或者直接套用作为课题科研成果
-
