@@ -48,8 +48,8 @@ AutoProtégé的设计主要采用面向规则对象的编程思想，将本体�
 基于以上构建的基础规则对象及其属性和函数方法，在顶层设计针对OWL文件的拆解和重组方法。AutoProtégé将一个OWL文件按结构顺序拆解为头部（header），实体关系集合（objectPropertyList），实体属性集合（dataPropertyList），类集合（classesList），实例集合（individualList）和尾部（footer）共6个集合模块。
 
 
-![](image/AutoProtégé_process.png)
 <p align="center">
+    ![](image/AutoProtégé_process.png)
     AutoProtégé本体文件处理流程图
 </p>
 
